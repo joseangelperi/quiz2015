@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//2015-07-07 Incluimos partials
+var partials = require('express-partials'); 
 
 var routes = require('./routes/index');
 //2015-07-06 Quitamos el enrutador users   
@@ -24,6 +26,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//2015-07-07 Incluimos partials
+app.use(partials());
 
 app.use('/', routes);
 //2015-07-06 Quitamos el enrutador users  
