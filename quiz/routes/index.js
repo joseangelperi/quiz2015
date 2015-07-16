@@ -13,6 +13,6 @@ router.get('/', function(req, res) {
 //2015-07-07 Importamos nuevas vistas
 router.get('/quizes/question', quizController.question);
 router.get('/quizes/answer', quizController.answer);
-
+router.get('/author', quizController.author);
 
 module.exports = router;
